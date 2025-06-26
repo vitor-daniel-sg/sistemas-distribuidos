@@ -1,0 +1,164 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #e4f3e8, #f9fbf9);
+}
+
+.top-bar {
+  background: linear-gradient(to right, #8dd7a6, #7acb9a);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.menu-icon {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.form-container {
+  background-color: white;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 20px;
+  background-color: #368c3f;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #2f7e36;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 700px;
+}
+
+.search-box input {
+  width: 80%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 8px 0 0 8px;
+  background-color: #f1f1f1;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #ccc;
+  color: #333;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #bfbfbf;
+}
+
+.result-box {
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* --- Simulador Distribuído --- */
+#simulador {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.nodes-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.node {
+  width: 100px;
+  height: 80px;
+  background: #8dd7a6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+.node.down {
+  background: #ccc;
+}
+.node .count {
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  font-size: 0.8rem;
+}
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#metrics p {
+  margin: 5px 0;
+}

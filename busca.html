@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Busca & Simulador Distribuído</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <!-- Menu e Busca existentes -->
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <div class="top-bar">
+    <h1>Busca de objetos</h1>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Pesquise seu objeto perdido aqui...">
+    <button onclick="pesquisar()">Pesquisar</button>
+  </div>
+  <div id="resultados" class="result-box">Nenhum resultado encontrado.</div>
+
+  <!-- Simulador Distribuído -->
+  <section id="simulador">
+    <h2>Simulador de Sistema Distribuído</h2>
+    <div id="nodes" class="nodes-container">
+      <!-- Nós serão criados via JS -->
+    </div>
+    <div class="controls">
+      <button onclick="pesquisar(); enviarRequisicao('Busca')">Pesquisar</button>
+      <span id="status">Status: pronto</span>
+    </div>
+    <div id="metrics">
+      <h3>Métricas</h3>
+      <p>Total de requisições enviadas: <span id="totalReq">0</span></p>
+      <p>Tempo médio de resposta (ms): <span id="avgLatency">0</span></p>
+    </div>
+  </section>
+
+  <!-- Menu lateral -->
+  <div class="menu" id="menu">
+    <a href="cadastro.html">Cadastro</a>
+    <a href="busca.html">Busca</a>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script src="simulador.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', initSimulador);
+  </script>
+
+</body>
+</html>
